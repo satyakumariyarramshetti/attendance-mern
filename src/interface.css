@@ -1,0 +1,98 @@
+/* Reset basic styles */
+body, h1, h5, label {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: rgb(180, 39, 39);
+  color: #333;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+}
+
+.company-logo {
+  height: 50px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  color: #007bff;
+}
+
+.main-wrapper {
+  min-height: 100vh;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+/* Form Styles */
+.form-group label {
+  font-weight: 500;
+  color: #444;
+}
+
+.form-control {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.submit-btn {
+  border-radius: 6px;
+  font-weight: 600;
+  background-color: #007bff;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+/* Icons */
+.fa-2x {
+  margin-bottom: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+  }
+}
