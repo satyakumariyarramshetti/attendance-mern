@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './interface.css';
-
+import { Link } from 'react-router-dom';
 const userData = {
   "101": "Arjun Kumar",
   "102": "Sana Reddy",
@@ -163,7 +163,7 @@ const AttendanceSystem = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     });
-
+  
     const result = await response.json();
 
     if (response.ok) {
@@ -231,6 +231,12 @@ const AttendanceSystem = () => {
       <header className="d-flex align-items-center justify-content-between px-4 py-3 bg-white shadow-sm">
         <img src="company-logo.png" alt="Company Logo" className="company-logo" style={{ height: '50px' }} />
         <h1 className="text-center flex-grow-1 m-0">Attendance System</h1>
+        <h1 className="text-center flex-grow-1 m-0">
+          <Link to='/login'>
+          Admin login
+          </Link>
+          </h1>
+
       </header>
 
       <div className="container py-5">

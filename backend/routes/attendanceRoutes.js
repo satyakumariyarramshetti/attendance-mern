@@ -79,5 +79,16 @@ router.post('/save', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+// GET all attendance records (Admin use)
+router.get('/all', async (req, res) => {
+  try {
+    const records = await Attendance.find().sort({ date: -1 });
+    res.json(records);
+  } catch (err) {
+    console.error("❌ Error fetching records:", err);
+    res.status(500).json({ error: 'Failed to fetch attendance records' });
+  }
+});
+
 
 module.exports = router;
